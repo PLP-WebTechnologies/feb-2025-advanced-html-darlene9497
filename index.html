@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced HTML5</title>
+    <!-- basic styling -->
     <style>
         table {
             width: 100%;
@@ -24,6 +25,7 @@
         <h1>Coding is Life</h1>
     </header>
     <main>
+        <!-- an ordered list with roman numerals -->
         <ol type="i">
             <li>HyperText Markup Language</li>
             <li>JavaScript</li>
@@ -34,6 +36,7 @@
             <li>Databases</li>
         </ol>
         <img src="https://images.pexels.com/photos/6804613/pexels-photo-6804613.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="coding screen">
+        <!-- information table -->
         <table>
             <th>Name</th>
             <th>Address</th>
@@ -72,6 +75,7 @@
         </table>
         <h2>Register</h2>
         <p>Fill in the form below to register</p>
+        <!-- registration form -->
         <form>
             <label for="Name">Name:</label>
             <input type="text" name="name" placeholder="Enter your name" required>
@@ -80,6 +84,7 @@
             <label for="Password">Password:</label>
             <input type="password" name="password" minlength="6" maxlength="20" placeholder="Enter your password" required>
             <input type="date" name="date">
+            <!-- dropdown list -->
             <select name="Choose course">
                 <option value="html">HyperText Markup Language</option>
                 <option value="js">JavaScript</option>
@@ -89,10 +94,12 @@
                 <option value="flutter">Flutter</option>
                 <option value="db">Databases</option>
             </select>
+            <!-- radio buttons -->
             <input type="radio" id="fend" name="language" value="frontend">
             <label for="html">FrontEnd</label>
             <input type="radio" id="bend" name="language" value="backend">
             <label for="css">BackEnd</label>
+            <!-- check box -->
             <input type="checkbox" id="agree" name="agree" value="agree">
             <label for="agree">I agree to the terms and conditions</label>
             <button type="submit">Submit</button>
