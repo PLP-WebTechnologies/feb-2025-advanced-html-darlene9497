@@ -6,8 +6,12 @@
     <title>Advanced HTML5</title>
     <!-- basic styling -->
     <style>
+        img {
+            width: 400px;
+            height: auto;
+        }
         table {
-            width: 100%;
+            width: 70%;
             border-collapse: collapse;
         }
         th, td {
@@ -17,6 +21,39 @@
         }
         th {
             background-color: gray;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, button {
+            padding: 8px;
+            border: 1px solid black;
+        }
+        .radio-btn, .check-box {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .radio-btn label,
+        .check-box label {
+            margin: 0;
+        }
+        .check-box {
+            margin-top: 20px;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -77,15 +114,21 @@
         <p>Fill in the form below to register</p>
         <!-- registration form -->
         <form>
-            <label for="Name">Name:</label>
+            <label for="name">Name:</label>
             <input type="text" name="name" placeholder="Enter your name" required>
-            <label for="Email">Email:</label>
+
+            <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Enter your email" required>
-            <label for="Password">Password:</label>
+
+            <label for="password">Password:</label>
             <input type="password" name="password" minlength="6" maxlength="20" placeholder="Enter your password" required>
+
+            <label for="date">Date:</label>
             <input type="date" name="date">
+
             <!-- dropdown list -->
-            <select name="Choose course">
+            <label for="course">Choose course:</label>
+            <select name="course">
                 <option value="html">HyperText Markup Language</option>
                 <option value="js">JavaScript</option>
                 <option value="css">Cascading Style Sheets</option>
@@ -94,14 +137,29 @@
                 <option value="flutter">Flutter</option>
                 <option value="db">Databases</option>
             </select>
+
             <!-- radio buttons -->
-            <input type="radio" id="fend" name="language" value="frontend">
-            <label for="html">FrontEnd</label>
-            <input type="radio" id="bend" name="language" value="backend">
-            <label for="css">BackEnd</label>
-            <!-- check box -->
-            <input type="checkbox" id="agree" name="agree" value="agree">
-            <label for="agree">I agree to the terms and conditions</label>
+            <label>Preferred path:</label>
+            <div class="radio-btn">
+                <input type="radio" id="fend" name="language" value="frontend">
+                <label for="fend">FrontEnd</label>
+            </div>
+            <div class="radio-btn">
+                <input type="radio" id="bend" name="language" value="backend">
+                <label for="bend">BackEnd</label>
+            </div>
+            <div class="radio-btn">
+                <input type="radio" id="fstack" name="language" value="fullstack">
+                <label for="fstack">Full stack</label>
+            </div>
+
+            <!-- checkbox  -->
+            <div class="check-box">
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- submit button -->
             <button type="submit">Submit</button>
         </form>
     </main>
