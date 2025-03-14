@@ -70,6 +70,33 @@
                 <td>ann@gmail.com</td>
             </tr>
         </table>
+        <h2>Register</h2>
+        <p>Fill in the form below to register</p>
+        <form>
+            <label for="Name">Name:</label>
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <label for="Email">Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <label for="Password">Password:</label>
+            <input type="password" name="password" minlength="6" maxlength="20" placeholder="Enter your password" required>
+            <input type="date" name="date">
+            <select name="Choose course">
+                <option value="html">HyperText Markup Language</option>
+                <option value="js">JavaScript</option>
+                <option value="css">Cascading Style Sheets</option>
+                <option value="react">React</option>
+                <option value="py">Python</option>
+                <option value="flutter">Flutter</option>
+                <option value="db">Databases</option>
+            </select>
+            <input type="radio" id="fend" name="language" value="frontend">
+            <label for="html">FrontEnd</label>
+            <input type="radio" id="bend" name="language" value="backend">
+            <label for="css">BackEnd</label>
+            <input type="checkbox" id="agree" name="agree" value="agree">
+            <label for="agree">I agree to the terms and conditions</label>
+            <button type="submit">Submit</button>
+        </form>
     </main>
 </body>
 </html>
