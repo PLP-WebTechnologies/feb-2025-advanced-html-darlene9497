@@ -4,58 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced HTML5</title>
-    <!-- basic styling -->
-    <style>
-        img {
-            width: 400px;
-            height: auto;
-        }
-        table {
-            width: 70%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: gray;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid black;
-            padding: 20px;
-            width: 300px;
-        }
-        label {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input, select, button {
-            padding: 8px;
-            border: 1px solid black;
-        }
-        .radio-btn, .check-box {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .radio-btn label,
-        .check-box label {
-            margin: 0;
-        }
-        .check-box {
-            margin-top: 20px;
-        }
-        button {
-            background-color: purple;
-            color: white;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -73,8 +21,10 @@
             <li>Databases</li>
         </ol>
         <img src="https://images.pexels.com/photos/6804613/pexels-photo-6804613.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="coding screen">
+
         <!-- information table -->
-        <table>
+        <table border="1">
+            <caption>Students information</caption>
             <th>Name</th>
             <th>Address</th>
             <th>Mobile</th>
@@ -110,22 +60,23 @@
                 <td>ann@gmail.com</td>
             </tr>
         </table>
+
+        <!-- registration form -->
         <h2>Register</h2>
         <p>Fill in the form below to register</p>
-        <!-- registration form -->
-        <form>
+        <form action="" method="">
             <label for="name">Name:</label>
             <input type="text" name="name" placeholder="Enter your name" required>
-
+            <br><br>
             <label for="email">Email:</label>
             <input type="email" name="email" placeholder="Enter your email" required>
-
+            <br><br>
             <label for="password">Password:</label>
             <input type="password" name="password" minlength="6" maxlength="20" placeholder="Enter your password" required>
-
+            <br><br>
             <label for="date">Date:</label>
             <input type="date" name="date">
-
+            <br><br>
             <!-- dropdown list -->
             <label for="course">Choose course:</label>
             <select name="course">
@@ -137,7 +88,7 @@
                 <option value="flutter">Flutter</option>
                 <option value="db">Databases</option>
             </select>
-
+            <br><br>
             <!-- radio buttons -->
             <label>Preferred path:</label>
             <div class="radio-btn">
@@ -152,13 +103,13 @@
                 <input type="radio" id="fstack" name="language" value="fullstack">
                 <label for="fstack">Full stack</label>
             </div>
-
+            <br>
             <!-- checkbox  -->
             <div class="check-box">
                 <input type="checkbox" id="agree" name="agree" value="agree">
                 <label for="agree">I agree to the terms and conditions</label>
             </div>
-
+            <br>
             <!-- submit button -->
             <button type="submit">Submit</button>
         </form>
